@@ -21,7 +21,7 @@ Realizar  _Login_   para obtener un token.
 ```sh
   {
     "username": "test",
-	"password" : "password"
+    "password" : "password"
   }
 ```
 
