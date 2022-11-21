@@ -1,0 +1,17 @@
+version: "2"
+services:
+  mysql:
+    container_name: mysql
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "ionix" # TODO: Change this
+      MYSQL_DATABASE: ionix
+      MYSQL_USER: ionix
+      MYSQL_PASSWORD: ionix
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - "33060:3306"
+volumes:
+  mysql:
