@@ -11,3 +11,5 @@
 ```sh
 docker compose up -d
 ```
+
+## Uso
