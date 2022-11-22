@@ -26,7 +26,10 @@ public class UserService {
 		return listUsers;
 	}
 	
-	public UserTO findUserByEmail(String email) {
+	public UserTO findUserByEmail(String email) throws UserException {
+		if(email == null) {
+			throw new UserException("The email field must not be empty.");
+		}
 		User user = userRepository.findByEmail(email);
 		if(user != null) {
 			return userToUserTO(user);

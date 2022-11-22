@@ -30,7 +30,7 @@ public class UserController extends BaseController{
 	}
 	
 	@PostMapping(path = "/search/email", produces = "application/json")
-	public ResponseApiTO<UserTO> findUserByEmail(@RequestBody UserTO userTO){
+	public ResponseApiTO<UserTO> findUserByEmail(@RequestBody UserTO userTO) throws UserException{
 		long start = System.currentTimeMillis();
 		UserTO user = userService.findUserByEmail(userTO.getEmail());
 		return generateRespuesta(user, start);
